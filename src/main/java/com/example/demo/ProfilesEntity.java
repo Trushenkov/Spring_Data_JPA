@@ -11,8 +11,8 @@ public class ProfilesEntity {
     private String firstName;
     private String lastName;
 
-    public ProfilesEntity(int id,String firstName, String lastName) {
-        this.id=id;
+    public ProfilesEntity(int id, String firstName, String lastName) {
+        this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
     }
@@ -62,11 +62,9 @@ public class ProfilesEntity {
 
     @Override
     public String toString() {
-        return "ProfilesEntity{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                '}';
+        return String.format(
+                "Profile[id=%d, firstName='%s', lastName='%s']",
+                id, firstName, lastName);
     }
 
     @Override
