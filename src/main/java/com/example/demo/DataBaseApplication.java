@@ -1,7 +1,5 @@
 package com.example.demo;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,8 +7,6 @@ import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 public class DataBaseApplication {
-
-    private static final Logger log = LoggerFactory.getLogger(DataBaseApplication.class);
 
     public static void main(String[] args) {
         SpringApplication.run(DataBaseApplication.class, args);
@@ -42,7 +38,7 @@ public class DataBaseApplication {
             System.out.println(repository.findByLastName("Bauer"));
 
             //Show profile by method findByFirstName()
-            System.out.println("Profile found by findByFirstname('Сергей'):");
+            System.out.println("Profile found by findByFirstName('Сергей'):");
             System.out.println("-------------------------------");
             System.out.println(repository.findByFirstName("Сергей"));
         };
