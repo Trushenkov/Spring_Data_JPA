@@ -9,4 +9,8 @@ public interface Repository extends CrudRepository<ProfilesEntity, Integer> {
     List<ProfilesEntity> findByLastName(String lastName);
 
     List<ProfilesEntity> findByFirstName(String firstName);
+
+    List<ProfilesEntity> findByFirstNameEndsWith(String value);
+
+    List<ProfilesEntity> findByLastNameStartsWith(String value);
 }
