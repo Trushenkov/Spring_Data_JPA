@@ -16,9 +16,9 @@ public class DataBaseApplication {
     public CommandLineRunner demo(Repository repository) {
 
         return (args) -> {
+
             repository.save(new ProfilesEntity(3,"Jack", "Bauer"));
             repository.save(new ProfilesEntity(4,"Nick", "Robertson"));
-
 
             // Show all profiles by method findAll()
             System.out.println(("Profile found with findAll():"));
@@ -41,6 +41,17 @@ public class DataBaseApplication {
             System.out.println("Profile found by findByFirstName('Сергей'):");
             System.out.println("-------------------------------");
             System.out.println(repository.findByFirstName("Сергей"));
+
+            //Show profile by method findByFirstNameOrderByFirstNameDesc()
+            System.out.println("Profile found by findByLastNameStartWith('R'):");
+            System.out.println("-------------------------------");
+            System.out.println(repository.findByLastNameStartsWith("R"));
+
+            //Show profile by method findByFirstNameOrderByFirstNameDesc()
+            System.out.println("Profile found by findByFirstNameEndsWith('ck'):");
+            System.out.println("-------------------------------");
+            System.out.println(repository.findByFirstNameEndsWith("ck"));
+
         };
     }
 }
