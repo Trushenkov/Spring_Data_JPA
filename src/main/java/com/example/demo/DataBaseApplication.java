@@ -42,12 +42,12 @@ public class DataBaseApplication {
             System.out.println("-------------------------------");
             System.out.println(repository.findByFirstName("Сергей"));
 
-            //Show profile by method findByFirstNameOrderByFirstNameDesc()
+            //Show profile by method findByLastNameStartWith('R')
             System.out.println("Profile found by findByLastNameStartWith('R'):");
             System.out.println("-------------------------------");
             System.out.println(repository.findByLastNameStartsWith("R"));
 
-            //Show profile by method findByFirstNameOrderByFirstNameDesc()
+            //Show profile by method findByFirstNameEndsWith('ck')
             System.out.println("Profile found by findByFirstNameEndsWith('ck'):");
             System.out.println("-------------------------------");
             System.out.println(repository.findByFirstNameEndsWith("ck"));
